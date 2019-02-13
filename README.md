@@ -16,6 +16,13 @@ Here is a list of my primary skills:
 * Maya
 * In Design
 * After Effects
+
+#### Contacts & Social Media
+
+* [Homepage](http://www.georgebrown.com)
+
+
+
 ### Kaori Igusa
 
 
