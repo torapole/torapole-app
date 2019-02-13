@@ -1,3 +1,18 @@
 # ToRaPoLe
 
 ## Heekyong Jang / Kaori Igusa
+
+### Heekyoung Jang
+
+Hi, my name is **Heekyoung**, but you can just call me **Lena**.
+Before I came to Canada, I graduated from university in Korea.
+I am in the second year in Interaction Design and Development program in George Brown College.
+
+
+Here is a list of my primary skills:
+
+* Photoshop
+* Illustrator
+* Maya
+* In Design
+* After Effects
