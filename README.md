@@ -29,3 +29,8 @@ Here is a list of my favorite FOODs:
   * American style
 * Ra-men
 * Ice cream
+
+#### Contacts & Media
+
+* [:computer: My Homepage](https://github.com/torapole/torapole-app/issues?q=assignee%3AKaoriGBC+is%3Aopen)
+* [Instagram]()
