@@ -145,6 +145,10 @@ margin-left: 20px;
   margin: 0;
 }
 
+.flighgt input {
+
+}
+
 
 
 /* -----------------  container2 -------------- */
@@ -213,11 +217,13 @@ margin-left: 20px;
 .todo h4 {
   color: black;
 }
-
+/* .time {
+  position: absolute;
+} */
 .todo input {
 height: 40px;
 width: 300px;
-margin-left: 20px;
+margin-left: 50px;
 }
 
 .accomo {
