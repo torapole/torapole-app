@@ -52,7 +52,7 @@ body {
 
 .layout {
   width: 1300px;
-  height: 800px;
+  height: 1000px;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 5px;
@@ -177,6 +177,13 @@ margin-left: 20px;
   height: 444px;
   overflow-y: scroll;
 }
+
+.flight {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+
 
 .memolist {
   height: 444px;
