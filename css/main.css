@@ -1,0 +1,215 @@
+h1, h2, h3, h4, span {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 10em;
+
+}
+
+h2 {
+  font-size: 2em;
+  padding-bottom: 10px;
+  color: #333333;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-bottom: 0;
+  color: #333333;
+
+}
+
+h4 {
+color: #f5f5f5;
+font-size: 1.1em;
+}
+
+span {
+  font-size: 5em;
+  color: #f5f5f5;
+}
+
+
+
+#plusb {
+      background-color: #5F9EA0;
+      border: none;
+      color: white;
+      padding: 3px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+
+}
+
+
+
+
+body {
+  background-color: #f5f5f5;
+  /* margin: 0; */
+}
+
+.layout {
+  width: 1300px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 5px;
+  /* position: fixed */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.container1 {
+  grid-column: 2 / 6;
+  text-align: center;
+  left: 0;
+  padding: 20px 5px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+
+  background-size: cover;
+  position: relative;
+}
+
+
+
+.container2 {
+  grid-column: 6 / 9;
+  text-align: center;
+  padding: 20px 5px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: relative;
+  /* color: #c39797; */
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    /* padding-bottom: 50px; */
+}
+
+li {
+text-align: justify;
+padding-bottom: 15px;
+/* padding-top: 15px; */
+}
+
+
+li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #333333;
+}
+
+
+.title {
+text-align: justify;
+font-size: 0.25em;
+margin-left: 20px;
+}
+
+.setdate {
+  color: #333333;
+}
+
+
+#title {
+  color: 	#5F9EA0;
+  font-size: 9em;
+}
+
+
+.setdate {
+  font-size: 0.5em;
+  padding-bottom: 30px;
+  text-align: justify;
+  margin-left: 20px;
+  color: #333333;
+}
+
+#checklist {
+  font-size: 1.2em;
+  padding-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
+  color: #333333;
+}
+
+#memolist {
+  font-size: 1.2em;
+  padding-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
+  color: #333333;
+}
+
+
+#path {
+  font-size: 1.2em;
+  padding-bottom: 20px;
+  text-align: left;
+  margin-left: 20px;
+  color: #333333;
+}
+
+.checklist {
+  height: 444px;
+  overflow-y: scroll;
+}
+
+.memolist {
+  height: 444px;
+  overflow-y: scroll;
+}
+
+
+#memo1 {
+  width: 40%;
+
+}
+
+#caption {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.6em;
+  color: #333333;
+
+}
+
+.addbtn {
+  padding-bottom: 25px;
+  text-align: right;
+}
+
+li input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#searchb {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#plusb {
+  font-family: 'Open Sans', sans-serif;
+
+}
