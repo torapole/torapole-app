@@ -15,4 +15,4 @@ const checkListul = document.getElementById('checklistul');  // our list of task
 
 
 
-checkListul.innerHTML = checklist.map(c => `<li class="check">${c.name}</li>` ).join('');
+checkListul.innerHTML = checklist.map(c => `<li class="check"><input type="checkbox">${c.name}</li>` ).join('');
