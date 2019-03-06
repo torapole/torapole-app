@@ -1,3 +1,4 @@
+
 let checklist = [
   { id: 0, name: "Light weight clothing that can be layered", complete: true },
   { id: 1, name: "Long-sleeved shirts", complete: false },
@@ -13,5 +14,5 @@ let checklist = [
 const checkListul = document.getElementById('checklistul');  // our list of tasks (ol)
 
 
-// OUTPUT THE RESULTS
+
 checkListul.innerHTML = checklist.map(c => `<li class="check">${c.name}</li>` ).join('');
