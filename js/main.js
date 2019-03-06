@@ -1,3 +1,3 @@
 // page3
 
-var name = 
+let  
