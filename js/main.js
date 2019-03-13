@@ -16,3 +16,17 @@ const checkListul = document.getElementById('checklistul');  // our list of task
 
 
 checkListul.innerHTML = checklist.map(c => `<li class="check"><input type="checkbox">${c.name}</li>` ).join('');
+
+
+let flightFirstStructure = [
+  {
+    date: `Data`,
+    number: `Flight Number`,
+    time: `Flight Time`
+  },
+  {
+    date: `March 13th`,
+    number: `ACA 61`,
+    time: `14:35`
+  },
+];

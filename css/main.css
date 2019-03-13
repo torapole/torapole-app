@@ -145,6 +145,15 @@ margin-left: 20px;
   margin: 0;
 }
 
+.flight_departure {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+}
+
+.flight_departure h3 {
+  color: #5F9EA0;
+}
+
 .box input {
   width: 30px;
 }
