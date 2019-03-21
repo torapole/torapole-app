@@ -30,3 +30,8 @@ let flightFirstStructure = [
     time: `14:35`
   },
 ];
+
+
+var plans = [
+  {date: {y:, m: d: }, task: "Hello world"}
+]
