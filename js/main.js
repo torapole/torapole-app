@@ -30,3 +30,40 @@ let flightFirstStructure = [
     time: `14:35`
   },
 ];
+
+var plusBtn=document.getElementById('plusb');
+plusBtn.addEventListener('click', checklistul);
+
+function checklistul() {
+  var checkAdd = document.getElementById('checkadd').value;
+  if (checkAdd === "") {
+    console.log("No checklist was provided");
+  } else {
+
+  var checkBox = document.createElement('input');
+  var addCheck = document.createTextNode(checkAdd);
+  var newCheck = document.createElement('li');
+
+  checkBox.type = 'checkbox';
+  newCheck.appendChild(checkBox);
+
+  newCheck.appendChild(addCheck);
+  document.getElementById('checklistul').appendChild(newCheck);
+
+}
+}
+
+var removeBtn = document.getElementById('removeb');
+removeBtn.addEventListener('click', removeTask);
+
+function removeTask() {
+  console.log("Selected tasks were removed");
+    var checklistul = document.getElementById('checklistul'),
+        items = Array.prototype.slice.call(checklistul.childNodes),
+        item;
+    while (item = items.pop()) {
+        if (item.firstChild && item.firstChild.checked) {
+            checklistul.removeChild(item);
+}
+}
+}

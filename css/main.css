@@ -78,7 +78,20 @@ img {
 
 }
 
+#removeb {
+      background-color: #5F9EA0;
+      border: none;
+      color: white;
+      padding: 8px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
 
+}
+
+.removebtn {
+  padding-bottom: 30px;
+}
 
 .layout {
   width: 1300px;
