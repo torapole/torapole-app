@@ -10,12 +10,55 @@ let checklist = [
   { id: 7, name: "Electric converters and adapters", complete: true }
 ];
 
-
 const checkListul = document.getElementById('checklistul');  // our list of tasks (ol)
+const theTaskForm = document.getElementById('newtask');  // our new task input
 
 
+theTaskForm.addEventListener('submit', event => {
+  checklist.push({
+    id: checklist.length,
+    name: theTaskForm.task.value,
+    complete: false
+  });
 
-checkListul.innerHTML = checklist.map(c => `<li class="check"><input type="checkbox">${c.name}</li>` ).join('');
+  theTaskForm.task.value = '';
+
+  printAllTasks();
+
+  event.preventDefault();
+});
+
+
+checkListul.addEventListener('click', event => {
+  if (event.target.matches('input')) {
+    let theId = event.target.dataset.id;
+    checklist.forEach(oneTask => {
+      if (oneTask.id == theId) {
+        oneTask.complete = !oneTask.complete;
+      }
+    })
+
+    printAllTasks();
+  }
+
+});
+
+function printAllTasks() {
+checkListul.innerHTML = checklist.map(oneTask =>
+  `<li class="task${  (oneTask.complete) ? ' complete' : ''  }">
+  <label>
+  <input type="checkbox"
+          data-id="${ oneTask.id }"
+          name="task${ oneTask.id }"
+          ${ (oneTask.complete) ? ' checked' : ''}>
+          ${oneTask.name}
+        </label>
+      </li>` ).join('');
+}
+
+printAllTasks();
+
+
 
 
 let flightFirstStructure = [
@@ -30,40 +73,3 @@ let flightFirstStructure = [
     time: `14:35`
   },
 ];
-
-var plusBtn=document.getElementById('plusb');
-plusBtn.addEventListener('click', checklistul);
-
-function checklistul() {
-  var checkAdd = document.getElementById('checkadd').value;
-  if (checkAdd === "") {
-    console.log("No checklist was provided");
-  } else {
-
-  var checkBox = document.createElement('input');
-  var addCheck = document.createTextNode(checkAdd);
-  var newCheck = document.createElement('li');
-
-  checkBox.type = 'checkbox';
-  newCheck.appendChild(checkBox);
-
-  newCheck.appendChild(addCheck);
-  document.getElementById('checklistul').appendChild(newCheck);
-
-}
-}
-
-var removeBtn = document.getElementById('removeb');
-removeBtn.addEventListener('click', removeTask);
-
-function removeTask() {
-  console.log("Selected tasks were removed");
-    var checklistul = document.getElementById('checklistul'),
-        items = Array.prototype.slice.call(checklistul.childNodes),
-        item;
-    while (item = items.pop()) {
-        if (item.firstChild && item.firstChild.checked) {
-            checklistul.removeChild(item);
-}
-}
-}
