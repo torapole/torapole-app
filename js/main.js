@@ -103,11 +103,22 @@ let flightFirstStructure = [
 //   }
 //---------------------Buy List---------------------------
 
-// let buylist = [
-//   { id: 0, name: "Chocolate", complete: true },
-//   { id: 1, name: "T-shirs", complete: false },
-//   { id: 2, name: "Mug", complete: false },
-// ];
+let buylist = [
+  { id: 0, name: "Chocolate", complete: true },
+  { id: 1, name: "T-shirs", complete: false },
+  { id: 2, name: "Mug", complete: false },
+];
+
+const allStuff = document.getElementById('allstuff');
+allStuff.innerHTML = tasks.map(s =>
+  `<li class="task">
+   <label>
+   <input type="checkbox" name="task${s.id}">
+   ${s.name}
+   </li>`).join('');
+
+   
+
 
 // const buyListul = document.getElementById('buylistul');  // our list of tasks (ol)
 // const theTaskForm = document.getElementById('newstuff');  // our new task input
