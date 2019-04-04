@@ -24,7 +24,52 @@ let checklist = [
 // })
 
 const checkListul = document.getElementById('checklistul');  // our list of tasks (ol)
+const theTaskForm = document.getElementById('newtask');  // our new task input
 
+
+theTaskForm.addEventListener('submit', event => {
+  checklist.push({
+    id: checklist.length,
+    name: theTaskForm.task.value,
+    complete: false
+  });
+
+  theTaskForm.task.value = '';
+
+  printAllTasks();
+
+  event.preventDefault();
+});
+
+
+checkListul.addEventListener('click', event => {
+  if (event.target.matches('input')) {
+    let theId = event.target.dataset.id;
+    checklist.forEach(oneTask => {
+      if (oneTask.id == theId) {
+        oneTask.complete = !oneTask.complete;
+      }
+    })
+
+    printAllTasks();
+  }
+
+});
+
+function printAllTasks() {
+checkListul.innerHTML = checklist.map(oneTask =>
+  `<li class="task${  (oneTask.complete) ? ' complete' : ''  }">
+  <label>
+  <input type="checkbox"
+          data-id="${ oneTask.id }"
+          name="task${ oneTask.id }"
+          ${ (oneTask.complete) ? ' checked' : ''}>
+          ${oneTask.name}
+        </label>
+      </li>` ).join('');
+}
+
+printAllTasks();
 
 
 checkListul.innerHTML = checklist.map(c =>
