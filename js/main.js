@@ -116,3 +116,12 @@ setDay.onclick = function() {
   var _userday = document.getElementById('userday');
   _userday.innerHTML = askDay;
 }
+
+// var setTerminal = document.querySelector('terminal');
+//
+//
+// setTerminal.onclick = function() {
+//   var askTerminal = prompt('Please enter your Terminal.');
+//   var _userTerminal = document.getElementById('terminalnum');
+//   _userTerminal.innerHTML = askTerminal;
+// }
