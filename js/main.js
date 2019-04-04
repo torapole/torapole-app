@@ -101,9 +101,70 @@ let flightFirstStructure = [
 //       </label>
 //     </li>`).join('');
 //   }
+//---------------------Buy List---------------------------
+
+// let buylist = [
+//   { id: 0, name: "Chocolate", complete: true },
+//   { id: 1, name: "T-shirs", complete: false },
+//   { id: 2, name: "Mug", complete: false },
+// ];
+
+// const buyListul = document.getElementById('buylistul');  // our list of tasks (ol)
+// const theTaskForm = document.getElementById('newstuff');  // our new task input
+//
+//
+// theTaskForm.addEventListener('submit', event => {
+//   buylist.push({
+//     id: buylist.length,
+//     name: theTaskForm.task.value,
+//     complete: false
+//   });
+//
+//   theTaskForm.task.value = '';
+//
+//   printAllTasks();
+//
+//   event.preventDefault();
+// });
 
 
+// buyListul.addEventListener('click', event => {
+//   if (event.target.matches('input')) {
+//     let theId = event.target.dataset.id;
+//     buylist.forEach(oneTask => {
+//       if (oneTask.id == theId) {
+//         oneTask.complete = !oneTask.complete;
+//       }
+//     })
+//
+//     printAllTasks();
+//   }
+//
+// });
 
+// function printAllTasks() {
+// buyListul.innerHTML = buylist.map(oneTask =>
+//   `<li class="task${  (oneTask.complete) ? ' complete' : ''  }">
+//   <label>
+//   <input type="checkbox"
+//           data-id="${ oneTask.id }"
+//           name="task${ oneTask.id }"
+//           ${ (oneTask.complete) ? ' checked' : ''}>
+//           ${oneTask.name}
+//         </label>
+//       </li>` ).join('');
+// }
+//
+// printAllTasks();
+
+
+// buyListul.innerHTML = buylist.map(c =>
+//   `<li class="check">
+//     <label>
+//       <input type="checkbox" name="task${b.id}">
+//       ${b.name}
+//     </label>
+//   </li>` ).join('');
 //---------------TO DO DAY PLAN---------------------------------------
 
 
