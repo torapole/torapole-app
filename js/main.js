@@ -10,19 +10,35 @@ let checklist = [
   { id: 7, name: "Electric converters and adapters", complete: true }
 ];
 
+// theTaskForm.addEventListener('submit', event => {
+//   tasks.push({
+//     id: tasks.length,
+//     name: theTaskForm.task.value,
+//     complete: false
+//
+//   });
+//
+//   theTaskForm.task.value = '';
+//   printAllTasks();
+//   event.preventDefault();
+// })
 
 const checkListul = document.getElementById('checklistul');  // our list of tasks (ol)
 
 
 
-checkListul.innerHTML = checklist.map(c => `<li class="check"><input type="checkbox">${c.name}</li>` ).join('');
+checkListul.innerHTML = checklist.map(c =>
+  `<li class="check">
+    <label>
+      <input type="checkbox" name="task${c.id}">
+      ${c.name}
+    </label>
+  </li>` ).join('');
 
 
 let flightFirstStructure = [
   {
-    date: `Data`,
-    number: `Flight Number`,
-    time: `Flight Time`
+
   },
   {
     date: `March 13th`,
@@ -30,3 +46,13 @@ let flightFirstStructure = [
     time: `14:35`
   },
 ];
+
+// function printAllTasks() {
+//   allTasks.innerHTML = tasks.map(oneTask =>
+//     `<li class="task${(oneTask.complete) ? 'complete' : ''}">
+//       <label>
+//         <input type="checkbox" name="task${oneTask.id}" ${(oneTask.complete) ?
+//         ${oneTask.name}
+//       </label>
+//     </li>`).join('');
+//   }
