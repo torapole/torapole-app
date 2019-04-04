@@ -101,3 +101,31 @@ let flightFirstStructure = [
 //       </label>
 //     </li>`).join('');
 //   }
+
+
+
+//---------------TO DO DAY PLAN---------------------------------------
+
+var dayButton = document.querySelector('button');
+var myDay = document.querySelector('userday')
+// var storedDay = ""
+
+function setUserDay(){
+  var askDay = prompt('Please enter the day.');
+  localStorage.setItem('day', askDay);
+  myDay.textContent = 'This plan is on,' + askDay
+}
+
+if(!localStorage.getItem('day')) {
+  setUserDay();
+} else {
+  var storedDay = localStorage.getItem('day');
+  myDay.textContent = 'This plan is on,' + storedDay;
+}
+
+dayButton.onclick = function(){
+  setUserDay();
+}
+
+// var _userday = document.getElementById('userday');
+// _userday.innerHTML = askDay;
