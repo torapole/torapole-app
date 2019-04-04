@@ -178,3 +178,14 @@ setDay.onclick = function() {
 //   var _userTerminal = document.getElementById('terminalnum');
 //   _userTerminal.innerHTML = askTerminal;
 // }
+
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+  var mySrc = myImage.getAttribute('src');
+  if(mySrc === 'img/08_summer copy.jpg') {
+    myImage.setAttribute ('src','img/09_summer copy.jpg');
+  } else {
+    myImage.setAttribute ('src','img/08_summer copy.jpg')
+  }
+}
