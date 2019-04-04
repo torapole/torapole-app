@@ -157,6 +157,9 @@ let flightFirstStructure = [
 //
 // printAllStuff();
 
+
+
+
 //---------------TO DO DAY PLAN---------------------------------------
 
 
@@ -169,6 +172,8 @@ let flightFirstStructure = [
 //   var _userday = document.getElementById('userday');
 //   _userday.innerHTML = askDay;
 // }
+
+//----------- Change the Day and Store-------------------
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('p');
@@ -190,7 +195,13 @@ myButton.onclick = function() {
   setUserDay();
 }
 
+//-------------Store plan---------------
+
+
+
 // --------------- outfit-------------
+
+// img doesnt chenge ?
 
 var myImage = document.querySelector('img');
 
