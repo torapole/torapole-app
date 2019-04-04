@@ -110,22 +110,60 @@ let buylist = [
 ];
 
 const allStuff = document.getElementById('allstuff');
-allStuff.innerHTML = tasks.map(s =>
-  `<li class="task">
-   <label>
-   <input type="checkbox" name="task${s.id}">
-   ${s.name}
-   </li>`).join('');
+const theStuffForm = document.getElementById('newstuff');
+
+theStuffForm.addEventListener('submit', event => {
+  stuff.push({
+    id: stuff.length,
+    name: theStuffForm.task.value,
+    complete: false
+  });
+
+theStuffForm.task.value = '';
+
+printAllStuff();
+
+event.preventDefault();
+});
+
+allStuff.addEventListener('click', event => {
+if (event.target.matches('input')) {
+  let theStuff = event.target.dataset.id;
+  stuff.forEach(oneStuff => {
+    if (oneTask.id == theStuff) {
+      oneStuff.complete = !oneTask.complete;
+    }
+  })
+  printAllStuff();
+}
+
+
+
+});
+
+// allStuff.innerHTML = tasks.map(s =>
+//   `<li class="task">
+//    <label>
+//    <input type="checkbox" name="task${s.id}">
+//    ${s.name}
+//    </li>`).join('');
 
 function printAllStuff() {
   allStuff.innerHTML = tasks.map(oneStuff =>
-  `<li class="task${(oneStuff.complete) ? 'complete' : ''}">
-  <label>
-    <input type="checkbox" name="task${oneStuff.id}" ${(oneStuff.complete) ?
-    ${oneStuff.name} </label>
-      </li>}`).join('')
-
+  `<li class="task${ (oneStuff.complete) ? 'complete' : ''}">
+    <label>
+     <input type="checkbox"
+            data-id="${ oneStuff.id }"
+            name="task${oneStuff.id}"
+            ${ (oneStuff.complete) ? 'checked' : '' }>
+            ${oneStuff.name}
+    </label>
+  </li>}`).join('')
 }
+
+printAllStuff();
+
+
 
 
 // const buyListul = document.getElementById('buylistul');  // our list of tasks (ol)
