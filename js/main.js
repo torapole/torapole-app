@@ -117,7 +117,15 @@ allStuff.innerHTML = tasks.map(s =>
    ${s.name}
    </li>`).join('');
 
-   
+function printAllStuff() {
+  allStuff.innerHTML = tasks.map(oneStuff =>
+  `<li class="task${(oneStuff.complete) ? 'complete' : ''}">
+  <label>
+    <input type="checkbox" name="task${oneStuff.id}" ${(oneStuff.complete) ?
+    ${oneStuff.name} </label>
+      </li>}`).join('')
+
+}
 
 
 // const buyListul = document.getElementById('buylistul');  // our list of tasks (ol)
