@@ -103,125 +103,60 @@ let flightFirstStructure = [
 //   }
 //---------------------Buy List---------------------------
 
-let buylist = [
-  { id: 0, name: "Chocolate", complete: true },
-  { id: 1, name: "T-shirs", complete: false },
-  { id: 2, name: "Mug", complete: false },
-];
-
-const allStuff = document.getElementById('allstuff');
-const theStuffForm = document.getElementById('newstuff');
-
-theStuffForm.addEventListener('submit', event => {
-  stuff.push({
-    id: stuff.length,
-    name: theStuffForm.task.value,
-    complete: false
-  });
-
-theStuffForm.task.value = '';
-
-printAllStuff();
-
-event.preventDefault();
-});
-
-allStuff.addEventListener('click', event => {
-if (event.target.matches('input')) {
-  let theStuff = event.target.dataset.id;
-  stuff.forEach(oneStuff => {
-    if (oneTask.id == theStuff) {
-      oneStuff.complete = !oneTask.complete;
-    }
-  })
-  printAllStuff();
-}
-
-
-
-});
-
-// allStuff.innerHTML = tasks.map(s =>
-//   `<li class="task">
-//    <label>
-//    <input type="checkbox" name="task${s.id}">
-//    ${s.name}
-//    </li>`).join('');
-
-function printAllStuff() {
-  allStuff.innerHTML = tasks.map(oneStuff =>
-  `<li class="task${ (oneStuff.complete) ? 'complete' : ''}">
-    <label>
-     <input type="checkbox"
-            data-id="${ oneStuff.id }"
-            name="task${oneStuff.id}"
-            ${ (oneStuff.complete) ? 'checked' : '' }>
-            ${oneStuff.name}
-    </label>
-  </li>}`).join('')
-}
-
-printAllStuff();
-
-
-
-
-// const buyListul = document.getElementById('buylistul');  // our list of tasks (ol)
-// const theTaskForm = document.getElementById('newstuff');  // our new task input
+// let buylist = [
+//   { id: 0, name: "Chocolate", complete: true },
+//   { id: 1, name: "T-shirs", complete: false },
+//   { id: 2, name: "Mug", complete: false },
+// ];
 //
+// const allStuff = document.getElementById('allstuff');
+// const theStuffForm = document.getElementById('newstuff');
 //
-// theTaskForm.addEventListener('submit', event => {
-//   buylist.push({
-//     id: buylist.length,
-//     name: theTaskForm.task.value,
+// theStuffForm.addEventListener('submit', event => {
+//   stuff.push({
+//     id: stuff.length,
+//     name: theStuffForm.task.value,
 //     complete: false
 //   });
 //
-//   theTaskForm.task.value = '';
+// theStuffForm.task.value = '';
 //
-//   printAllTasks();
+// printAllStuff();
 //
-//   event.preventDefault();
+// event.preventDefault();
 // });
-
-
-// buyListul.addEventListener('click', event => {
-//   if (event.target.matches('input')) {
-//     let theId = event.target.dataset.id;
-//     buylist.forEach(oneTask => {
-//       if (oneTask.id == theId) {
-//         oneTask.complete = !oneTask.complete;
-//       }
-//     })
 //
-//     printAllTasks();
-//   }
-//
-// });
-
-// function printAllTasks() {
-// buyListul.innerHTML = buylist.map(oneTask =>
-//   `<li class="task${  (oneTask.complete) ? ' complete' : ''  }">
-//   <label>
-//   <input type="checkbox"
-//           data-id="${ oneTask.id }"
-//           name="task${ oneTask.id }"
-//           ${ (oneTask.complete) ? ' checked' : ''}>
-//           ${oneTask.name}
-//         </label>
-//       </li>` ).join('');
+// allStuff.addEventListener('click', event => {
+// if (event.target.matches('input')) {
+//   let theStuff = event.target.dataset.id;
+//   stuff.forEach(oneStuff => {
+//     if (oneTask.id == theStuff) {
+//       oneStuff.complete = !oneTask.complete;
+//     }
+//   })
+//   printAllStuff();
 // }
 //
-// printAllTasks();
-
-
-// buyListul.innerHTML = buylist.map(c =>
-//   `<li class="check">
+//
+//
+// });
+//
+//
+// function printAllStuff() {
+//   allStuff.innerHTML = tasks.map(oneStuff =>
+//   `<li class="task${ (oneStuff.complete) ? 'complete' : ''}">
 //     <label>
-//       <input type="checkbox" name="task${b.id}">
-//       ${b.name}
+//      <input type="checkbox"
+//             data-id="${ oneStuff.id }"
+//             name="task${oneStuff.id}"
+//             ${ (oneStuff.complete) ? 'checked' : '' }>
+//             ${oneStuff.name}
 //     </label>
-//   </li>` ).join('');
+//   </li>}`).join('')
+// }
+//
+// printAllStuff();
+
 //---------------TO DO DAY PLAN---------------------------------------
 
 
