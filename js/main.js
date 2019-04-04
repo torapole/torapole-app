@@ -134,3 +134,8 @@ askDay = prompt(`Enter the day of plan. MM DD`);
 
 var _userday = document.getElementById('userday');
 _userday.innerHTML = askDay;
+
+// Can I put askDay for 2places? 
+
+// var _tripday = document.getElementById('userday');
+// _tripday.innerHTML = askDay;
