@@ -160,24 +160,37 @@ let flightFirstStructure = [
 //---------------TO DO DAY PLAN---------------------------------------
 
 
+//
+// var setDay = document.querySelector('button');
+//
+//
+// setDay.onclick = function() {
+//   var askDay = prompt('Please enter the day.');
+//   var _userday = document.getElementById('userday');
+//   _userday.innerHTML = askDay;
+// }
 
-var setDay = document.querySelector('button');
+var myButton = document.querySelector('button');
+var myHeading = document.querySelector('p');
 
-
-setDay.onclick = function() {
-  var askDay = prompt('Please enter the day.');
-  var _userday = document.getElementById('userday');
-  _userday.innerHTML = askDay;
+function setUserDay(){
+  var myDay = prompt('Please enter the day.');
+  localStorage.setItem('name', myDay);
+  myHeading.textContent = 'This plan for, ' + myDay
 }
 
-// var setTerminal = document.querySelector('terminal');
-//
-//
-// setTerminal.onclick = function() {
-//   var askTerminal = prompt('Please enter your Terminal.');
-//   var _userTerminal = document.getElementById('terminalnum');
-//   _userTerminal.innerHTML = askTerminal;
-// }
+if(!localStorage.getItem('name')) {
+  setUserDay();
+} else {
+  var storedDay = localStorage.getItem('name');
+  myHeading.textContent = 'This plan for, ' + storedDay;
+}
+
+myButton.onclick = function() {
+  setUserDay();
+}
+
+// --------------- outfit-------------
 
 var myImage = document.querySelector('img');
 
