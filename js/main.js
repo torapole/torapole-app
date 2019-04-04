@@ -106,36 +106,13 @@ let flightFirstStructure = [
 
 //---------------TO DO DAY PLAN---------------------------------------
 
-// var dayButton = document.querySelector('button');
-// var myDay = document.querySelector('userday')
-//
-// function setUserDay(){
-//   var askDay = prompt('Please enter the day.');
-//   localStorage.setItem('day', askDay);
-//   myDay.textContent = 'This plan is on,' + askDay
-// }
-//
-// if(!localStorage.getItem('day')) {
-//   setUserDay();
-// } else {
-//   var storedDay = localStorage.getItem('day');
-//   myDay.textContent = 'This plan is on,' + storedDay;
-// }
-//
-// dayButton.onclick = function(){
-//   setUserDay();
-// }
 
-// var _userday = document.getElementById('userday');
-// _userday.innerHTML = askDay;
 
-var askDay = ""
-askDay = prompt(`Enter the day of plan. MM DD`);
+var setDay = document.querySelector('button');
 
-var _userday = document.getElementById('userday');
-_userday.innerHTML = askDay;
 
-// Can I put askDay for 2places? 
-
-// var _tripday = document.getElementById('userday');
-// _tripday.innerHTML = askDay;
+setDay.onclick = function() {
+  var askDay = prompt('Please enter the day.');
+  var _userday = document.getElementById('userday');
+  _userday.innerHTML = askDay;
+}
