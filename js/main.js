@@ -1,22 +1,4 @@
-var myTripButton = document.getElementById('datetripb');
-var myTripDay = document.getElementById('datetrip');
 
-function setTrip(){
-  var myDay = prompt('Please enter your Trip.');
-  localStorage.setItem('date', myDay);
-  myTripDay.textContent = myDay
-}
-
-if(!localStorage.getItem('date')) {
-  setTrip();
-} else {
-  var storedDay = localStorage.getItem('date');
-  myTripDay.textContent = storedDay;
-}
-
-myTripButton.onclick = function() {
-  setTrip();
-}
 
 
 
@@ -198,6 +180,7 @@ let flightFirstStructure = [
 
 var myButton = document.getElementById('changeb');
 var myHeading = document.getElementById('userday');
+var currentDay = localStorage.getItem('name');
 
 function setUserDay(){
   var myDay = prompt('Please enter the day.');
@@ -220,7 +203,7 @@ myButton.onclick = function() {
 }
 
 //-------------Store plan---------------
-var currentDay = localStorage.getItem('name');
+
 
 
 function savePlan(){
@@ -241,7 +224,25 @@ function callPlan(){
   document.getElementById('6:30').value = storedPlan;
 }
 
+var myTripButton = document.getElementById('datetripb');
+var myTripDay = document.getElementById('datetrip');
 
+function setTrip(){
+  var myDay = prompt('Please enter your Trip.');
+  localStorage.setItem('date', myDay);
+  myTripDay.textContent = myDay
+}
+
+if(!localStorage.getItem('date')) {
+  setTrip();
+} else {
+  var storedDay = localStorage.getItem('date');
+  myTripDay.textContent = storedDay;
+}
+
+myTripButton.onclick = function() {
+  setTrip();
+}
 
 // --------------- outfit-------------
 
