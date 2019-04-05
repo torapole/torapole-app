@@ -1,3 +1,24 @@
+var myButton = document.getElementById('datetripb');
+var myHeading = document.getElementById('datetrip');
+
+function setTrip(){
+  var myDay = prompt('Please enter your Trip.');
+  localStorage.setItem('date', myDay);
+  myHeading.textContent = myDay
+}
+
+if(!localStorage.getItem('date')) {
+  setTrip();
+} else {
+  var storedDay = localStorage.getItem('date');
+  myHeading.textContent = storedDay;
+}
+
+myButton.onclick = function() {
+  setTrip();
+}
+
+
 
 let checklist = [
   { id: 0, name: "Light weight clothing that can be layered", complete: true },
@@ -203,7 +224,7 @@ myButton.onclick = function() {
 
 // img doesnt chenge ?
 
-var myImage = document.querySelector('img');
+var myImage = document.getElementById('style');
 
 myImage.onclick = function() {
   var mySrc = myImage.getAttribute('src');
