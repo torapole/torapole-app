@@ -175,20 +175,20 @@ let flightFirstStructure = [
 
 //----------- Change the Day and Store-------------------
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('p');
+var myButton = document.getElementById('changeb');
+var myHeading = document.getElementById('userday');
 
 function setUserDay(){
   var myDay = prompt('Please enter the day.');
   localStorage.setItem('name', myDay);
-  myHeading.textContent = 'This plan for, ' + myDay
+  myHeading.textContent = myDay
 }
 
 if(!localStorage.getItem('name')) {
   setUserDay();
 } else {
   var storedDay = localStorage.getItem('name');
-  myHeading.textContent = 'This plan for, ' + storedDay;
+  myHeading.textContent = storedDay;
 }
 
 myButton.onclick = function() {
