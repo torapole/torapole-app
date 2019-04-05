@@ -218,6 +218,10 @@ myButton.onclick = function() {
 
 //-------------Store plan---------------
 
+function savePlan(){
+  var myDayPlan = document.getElementById('6:00').value;
+
+}
 
 
 // --------------- outfit-------------
