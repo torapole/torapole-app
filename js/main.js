@@ -183,7 +183,7 @@ var myHeading = document.getElementById('userday');
 var currentDay = localStorage.getItem('name');
 
 function setUserDay(){
-  var myDay = prompt('Please enter the day.');
+  var myDay = prompt('Please enter your Day of Plan by MM/DD');
   localStorage.setItem('name', myDay);
   myHeading.textContent = myDay
   currentDay = localStorage.getItem('name');
@@ -228,7 +228,7 @@ var myTripButton = document.getElementById('datetripb');
 var myTripDay = document.getElementById('datetrip');
 
 function setTrip(){
-  var myDay = prompt('Please enter your Trip.');
+  var myDay = prompt('Please enter your Trip by MM/DD - MM/DD.');
   localStorage.setItem('date', myDay);
   myTripDay.textContent = myDay
 }
